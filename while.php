@@ -8,10 +8,11 @@
 <body>
 
 <?php 
-	for ($i=1; $i <=6; $i++) { 
+	$x = 1;
+	while($x <= 10){
+		echo $x . '<br>';
 
-			echo '<h' . $i . '> soy el numro:' . $i . '</h' . $i . '>' ;
-			
+		$x++;	
 	}
 ?>
 
