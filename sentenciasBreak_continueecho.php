@@ -5,7 +5,8 @@
 	 	'Col',
 	 	'Ven',
 	 	'Uru',
-	 	'Chi'
+	 	'Chi',
+	 	'Esp'
 	 	);
 
 	 
@@ -22,15 +23,28 @@
 	<ul>
 		<?php 
 		foreach ($paises as $pais) {
-			echo '<li>' . $pais . '</li>';
+			
 			if($pais == 'Per'){
 				break;
 			}
+			echo '<li>' . $pais . '</li>';
 		}
-
+ 	// BREAK CORTA EL CICLO  Y SALE
 		
 		?>
 	</ul>
+
+	<h1> Paises Latam</h1>
+	<?php 
+	// CONTINUE SALTA EL CICLO PASANDO A LA SGT ITERACION
+		foreach ($paises as $pais) {
+			if ($pais == 'Esp'){
+				continue;
+			}
+			echo $pais . '<br />';
+			
+		}
+	?>
 
 </body>
 </html>
