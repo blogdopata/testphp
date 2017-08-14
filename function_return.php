@@ -1,10 +1,12 @@
 <?php 
-
-
 	function suma($num1, $num2){
 		$resutaldo = $num1 + $num2;
 		
 		return $resutaldo;
+	}
+	function saludo($nam1){
+
+		return "SALUDO $nam1";
 	}
 ?>
 
@@ -21,10 +23,12 @@
 	
 	$resultado = suma(10,15);
 
-	echo $resultado + 5;
+	echo "$resultado" + 5 . "<br />"; 
 
-
-
+	echo saludo("victor") . '<br/>';
+	echo saludo("jose") . '<br/>';
 ?>
+
+
 </body>
 </html>
