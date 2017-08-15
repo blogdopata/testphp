@@ -3,14 +3,16 @@
 //mediante el name del submit
 $errores ="";
 $enviado ="";
+// si submit existe realizar el bloque
 if(isset($_POST['submit'])){
 	$nombre= $_POST['nombre'];
 	$correo= $_POST['correo'];
-	$mensaje= $_POST['mensaje'];
+	$mensaje= $_POST['mensaje']
+	;
 // si la variable nombre NO esta vacia ejecuta
 // empty ($nombre )  --> SI ESTA VACIA , al negarlo le decimos si no esta VACIA EJECUTA
 
- 
+  
 	if(!empty($nombre)){
 		$nombre =  trim($nombre);
 		$nombre = filter_var($nombre,FILTER_SANITIZE_STRING);
@@ -43,6 +45,7 @@ if(isset($_POST['submit'])){
 		$mensaje_preparado	= "DE: $nombre \n";
 		$mensaje_preparado .= "Correo: $correo \n";
 		$mensaje_preparado .= "Mensaje: " .$mensaje;
+		echo "se envio";
 // Falta subir archivos a un hosting
 		//mail($enviar_a, $asunto, $mensaje_preparado);
 
