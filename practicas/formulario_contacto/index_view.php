@@ -15,7 +15,7 @@
 		<input type="text" id="correo" class="form-control" name="correo" placeholder="correo"  value="<?php if(!$enviado && isset($correo)){ echo $correo; } ?>">
 		
 		<textarea name="mensaje" class="form-control" id="mensaje" placeholder="Mensaje: "><?php if(!$enviado && isset($mensaje)){ echo $mensaje; } ?></textarea>
-		<!-- Si la var $erorres NO esta vacia -->
+		<!-- Si la variable $erorres NO esta vacia --> 
 		<?php  if(!empty($errores)): ?>
 			<div class="alert error">
 				<?php echo $errores; ?>

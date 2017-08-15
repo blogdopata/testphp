@@ -8,6 +8,9 @@ if(isset($_POST['submit'])){
 	$correo= $_POST['correo'];
 	$mensaje= $_POST['mensaje'];
 // si la variable nombre NO esta vacia ejecuta
+// empty ($nombre )  --> SI ESTA VACIA , al negarlo le decimos si no esta VACIA EJECUTA
+
+ 
 	if(!empty($nombre)){
 		$nombre =  trim($nombre);
 		$nombre = filter_var($nombre,FILTER_SANITIZE_STRING);
@@ -15,6 +18,7 @@ if(isset($_POST['submit'])){
 		$errores.="Por favor ingresa un nombre<br/>";
 	}
 // si la variable $correo no esta vacia ejecuta
+// Si la variable tiene contenido  == !empty($correo)
 	if(!empty($correo)){
 		$correo= filter_var($correo,FILTER_SANITIZE_EMAIL);
 		if(!filter_var($correo,FILTER_VALIDATE_EMAIL)){

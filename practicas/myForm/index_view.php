@@ -7,6 +7,7 @@
 </head>
 <body>
 	<div class="contenedor">
+				
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 			<input type="text" name="nombre" placeholder="Nombre" value="<?php if(!$enviado && isset($nombre)){ echo $nombre;}  ?>">
 			<input type="text" name="mail" placeholder="e-mail" value="<?php if(!$enviado && isset($mail)){ echo $mail;} ?>">

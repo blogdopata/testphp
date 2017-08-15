@@ -1,7 +1,7 @@
 <?php 
 	$errores="";
 	$enviado="";
-// ISSET DETERMINA SI UNA VARIABLE FUE DEFINIDA o ES NULL
+// ISSET DETERMINA SI UNA VARIABLE FUE DEFINIDA o ES NULL / == 1
 if(isset($_POST['submit'])){
 	$nombre = $_POST['nombre'];
 	$mail = $_POST['mail'];
@@ -10,6 +10,7 @@ if(isset($_POST['submit'])){
 	if(!empty($nombre)){
 		$nombre = trim($nombre);
 		$nombre = filter_var($nombre,FILTER_SANITIZE_STRING);
+		
 	}else{
 		$errores.= "Ingrese un Nombre correctoxD <br/>";
 	}
@@ -48,7 +49,6 @@ if(isset($_POST['submit'])){
 
 require 'index_view.php' 
  ?>
-
 
 
 
