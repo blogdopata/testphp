@@ -9,15 +9,16 @@
 	<div class="contenedor">
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 			<input type="text" name="nombre" placeholder="Nombre" value="<?php if(!$enviado && isset($nombre)){ echo $nombre;}  ?>">
-			<input type="text" name="mail" placeholder="e-mail">
+			<input type="text" name="mail" placeholder="e-mail" value="<?php if(!$enviado && isset($mail)){ echo $mail;} ?>">
 			<textarea name="mensaje" placeholder="Mensaje: "></textarea>
+
 			<?php if(!empty($errores)): ?>
-			<div class="alert error">
-				<?php echo $errores; ?>
-			</div>
+				<div class="alert error">
+					<?php echo $errores; ?>
+				</div>
 			<?php elseif ($enviado): ?>
 				<div class="alert success">
-				<p>Enviado correctamente</p>
+					<p>Enviado correctamente</p>
 				</div> 
 			<?php endif?>
 			

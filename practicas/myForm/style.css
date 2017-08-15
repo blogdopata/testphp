@@ -17,7 +17,7 @@ body{
 	padding: 10px;
 	background-color: white;
 	box-shadow: 5px 5px 5px #888888;
-	text-align: center;
+	
 }
 form input[type="text"],
 form input[type="email"],
@@ -43,11 +43,14 @@ form input[type="submit"]{
 }
 
 .alert{
+	width: 90%;
 	padding:1em;
 	color:white;
 	border-radius: 2px;
+	margin:0 auto;
 	margin-bottom: 20px;
 	font-size: 14px;
+	
 }
 .alert.error{
 	background-color: #F2dede;
