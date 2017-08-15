@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 	} else{
 		$errores .= "Por favor Ingreesa el MSJ";
 	}
-// Preguntando si hay errrores
+// Preguntando si no hay errrores
 	if(!$errores){
 		$enviar_a = 'vcaballeroc@usmp.pe';
 		$asunto = 'Correo envaido desde MiSite.com';
