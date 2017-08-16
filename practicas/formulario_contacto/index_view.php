@@ -10,7 +10,7 @@
 <body>
 <div class="wrap">
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
-		<input type="text" id="nombre" class="form-control" name="nombre" placeholder="nombre" value="<?php if(!$enviado && isset($nombre)){ echo $nombre; } ?>">
+		<input type="text" id="nombre" class="form-control" name="nombre" placeholder="nombre" value="<?php if(!$enviado && !empty($nombre)){ echo $nombre; } ?>">
 		
 		<input type="text" id="correo" class="form-control" name="correo" placeholder="correo"  value="<?php if(!$enviado && isset($correo)){ echo $correo; } ?>">
 		
@@ -26,7 +26,7 @@
 			</div>
 		<?php endif ?>
 
-
+		
 		
 		<input type="submit" name="submit" class="btn btn-primary" value="Enviar correo">
 </form>
