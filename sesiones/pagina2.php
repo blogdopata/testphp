@@ -1,7 +1,7 @@
 <?php 
 session_start();
 //  if ($_SESSION) --> existe una sesion
-if ($_SESSION){
+if (!empty($_SESSION)){
 	$nombre = $_SESSION['nombre'];
 	echo "<h1> Hola , $nombre <br/>" ;
 	print_r($_SESSION);
