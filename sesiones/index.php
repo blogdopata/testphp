@@ -2,7 +2,7 @@
 session_start();
 
 $_SESSION['nombre'] = 'Victor';
-
+$_SESSION['edad'] = 23;
  ?>
 
 <!DOCTYPE html>
