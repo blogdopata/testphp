@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)){
 		
 		move_uploaded_file($_FILES['foto']['tmp_name'], $archivo_subido);
 
-		$statement = $conexion->prepare('INSERT INTO fotos (titulo, imagen, texto) VALUES (:titulo, :imagen, :texto)');
+		$statement = $conexion->prepare('INSERT INTO fotos (titulo, imagen, texto) VALUES (:titulo, :imagen, :texto');
 		$statement->execute(array(
 			':titulo' => $_POST['titulo'],
 			':imagen' => $_FILES['foto']['name'],
