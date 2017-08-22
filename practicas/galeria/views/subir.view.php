@@ -16,6 +16,7 @@
 </header>	
 <div class="contenedor">
 	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ; ?>" class="formulario" method="post" enctype="multipart/form-data">
+
 		<label for="foto">Selecciona tu foto</label>
 		<input type="file" id="foto" name="foto">
 		
@@ -26,7 +27,7 @@
 		<textarea name="texto" id="texto" placholder="ingresa una descripcion"></textarea>
 
 		<input type="submit" class="submit" valu="Subir foto">
-		<?php if (isset($error)): ?>
+		<?php if (!empty($error)): ?>
 			<div class="error">
 				<?php echo $error ?>
 			</div>

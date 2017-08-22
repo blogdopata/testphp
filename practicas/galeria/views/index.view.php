@@ -16,39 +16,24 @@
 </header>	
 <section class="fotos">
 	<div class="contenedor">
-		 <div class="thumb">
-		 		<a href="#">
-		 			<img src="images/1.jpg" alt="">
-		 		</a>
-		 </div>
-		  <div class="thumb">
-		 		<a href="#">
-		 			<img src="images/2.jpg" alt="">
-		 		</a>
-		 </div>
-		  <div class="thumb">
-		 		<a href="#">
-		 			<img src="images/3.jpg" alt="">
-		 		</a>
-		 </div>
-		  <div class="thumb">
-		 		<a href="#">
-		 			<img src="images/4.jpg" alt="">
-		 		</a>
-		 </div>
-		 <div class="thumb">
-		 		<a href="#">
-		 			<img src="images/5.jpg" alt="">
-		 		</a>
-		 </div>
-		 <div class="thumb">
-		 		<a href="#">
-		 			<img src="images/6.jpg" alt="">
-		 		</a>
-		 </div>
+		<?php foreach ($fotos as $foto): ?>
+			<div class="thumb">
+				<a href="foto.php?id=<?php echo $foto['id'] ?>">
+					<img src="fotos/<?php echo $foto['imagen']; ?>" alt="">
+				</a>
+			</div>
+			
+		<?php endforeach ?>
 		<div class="paginacion">
-			<a href="#" class="izquierda"><i class="fa fa-long-arrow-left"></i>Pagina anterior</a>
-			<a href="#" class="derecha"><i class="fa fa-long-arrow-right"></i>Pagina Siguiente </a>
+
+		<?php if ($pagina_actual>1): ?>
+			<a href="index.php?p=<?php echo $pagina_actual-1; ?>" class="izquierda"><i class="fa fa-long-arrow-left"></i>Pagina anterior</a>
+		<?php endif ?>
+
+		<?php if ($total_paginas != $pagina_actual): ?>
+			<a href="index.php?p=<?php echo $pagina_actual+1; ?> " class="derecha"><i class="fa fa-long-arrow-right"></i>Pagina Siguiente </a> 
+		<?php endif ?>
+		
 		</div>
 	</div>
 </section>

@@ -11,15 +11,22 @@
 <body>
 <header>
 	<div class="contenedor">
-		<h1 class="titulo">Foto 1.jpg</h1>
+		<h1 class="titulo">Foto 
+			<?php if(!empty($foto['titulo'])){ 
+				echo $foto['titulo'];
+				}else {
+					echo $foto['imagen'];
+				}
+
+				?></h1>
 	</div>
 </header>	
 <section class="fotos">
 	<div class="contenedor">
 		<div class="foto">
 			
-			<img src="images/1.jpg" alt="">
-			<p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, vitae!</p>
+			<img src="fotos/<?php echo $foto['imagen']; ?>" alt="">
+			<p class="texto"><?php echo $foto['texto']; ?></p>
 			<a href="index.php" class="regresar"><i class="fa fa-long-arrow-left"></i>Regresar</a>
 		</div>
 	</div>
