@@ -13,6 +13,9 @@ if(!$conexion){
 if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_FILES)){
 // check guarda la imagen o un FALSE
 	$check = @getimagesize($_FILES['foto']['tmp_name']);
+	echo "<pre>";
+	var_dump($_FILES);
+	echo "</pre>";
 	if($check !== false){
 		$carpeta_destino = 'fotos/';
 		$archivo_subido = $carpeta_destino . $_FILES['foto']['name'];
