@@ -1,7 +1,7 @@
 <header>
 	<div class="contenedor">
 		<div class="logo izquierda">
-			<p><a href="#">TestPHP</a></p>
+			<p><a href="<?php echo RUTA;?>">TestPHP</a></p>
 		</div>
 
 		<div class="derecha">

@@ -15,34 +15,17 @@
 <div class="contenedor">
 	<div class="post">
 		<article>
-			<h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
+			<h2 class="titulo">Titulo del articulo</h2>
 			<p class="fecha"></p>1 de Enero del  2016
 			<div class="thumb">
 				<a href="#"><img src="<?php echo RUTA;?>/imagenes/1.png" alt=""></a>
-			<p class="extracto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora!</p>
-			<a href="#" class="continuar">Continuar leyendo</a>
-
 			</div>
+			<p class="extracto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure ullam dicta sed, asperiores eos quo sint quibusdam ad, impedit qui dolore repellat, error repellendus laborum unde. Enim voluptatum totam maiores? <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quibusdam amet cumque consequuntur eos vel eveniet sapiente fugit nobis sequi quos iusto necessitatibus nesciunt voluptatem laboriosam vitae, rerum quo harum?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit obcaecati assumenda quo ut quod culpa cupiditate atque, ipsa nostrum, consequuntur minima rerum. Praesentium eaque, iste culpa aut optio nobis harum.</p>
 
 		</article>
 	</div>
 
-	<div class="post">
-		<article>
-			<h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
-			<p class="fecha"></p>1 de Enero del  2016
-			<div class="thumb">
-				<a href="#"><img src="<?php echo RUTA;?>/imagenes/1.png" alt=""></a>
-			<p class="extracto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora!</p>
-			<a href="#" class="continuar">Continuar leyendo</a>
 
-			</div>
-
-		</article>
-	</div>
-
-	<?php require 'paginacion.php'; ?>
-</div>
 
 <?php require 'views/footer.php'; ?>
 	
