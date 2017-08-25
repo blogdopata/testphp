@@ -13,34 +13,26 @@
 <?php require 'views/header.php'; ?>
 
 <div class="contenedor">
+<?php foreach ($posts as $post): ?>
 	<div class="post">
 		<article>
-			<h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
-			<p class="fecha"></p>1 de Enero del  2016
+			<h2 class="titulo"><a href="single.php?id=<?php echo $post['id'] ;?>"><?php echo $post['titulo']; ?></a></h2>
+			<p class="fecha"><?php echo $post['fecha'] ;?></p>
 			<div class="thumb">
-				<a href="#"><img src="<?php echo RUTA;?>/imagenes/1.png" alt=""></a>
-			<p class="extracto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora!</p>
+				<a href="single.php?id=<?php echo $post['id']; ?>"><img src="<?php echo RUTA;?>/imagenes/<?php echo $post['thumb'] ?>" alt=""></a>
+			<p class="extracto"><?php echo $post['extracto']; ?></p>
 			<a href="#" class="continuar">Continuar leyendo</a>
 
 			</div>
 
 		</article>
 	</div>
+	
+<?php endforeach ?>
 
-	<div class="post">
-		<article>
-			<h2 class="titulo"><a href="#">Titulo del articulo</a></h2>
-			<p class="fecha"></p>1 de Enero del  2016
-			<div class="thumb">
-				<a href="#"><img src="<?php echo RUTA;?>/imagenes/1.png" alt=""></a>
-			<p class="extracto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, tempora!</p>
-			<a href="#" class="continuar">Continuar leyendo</a>
 
-			</div>
-
-		</article>
-	</div>
-
+ 
+	
 	<?php require 'paginacion.php'; ?>
 </div>
 

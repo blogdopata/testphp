@@ -1,9 +1,9 @@
 <?php 
 
-function conexcion($bd_cofing){
-
+function conexion($bd_config){
 	try {
-		$conexion = new PDO('mysql:host=localhost;dbname='.$bd_config['basedatos'],$bd_config['user'],$bd_pass['pass']);
+		$conexion = new PDO("mysql:host=localhost;dbname=".$bd_config['basedatos'],$bd_config['user'], $bd_config['pass']);
+
 		return $conexion;
 
 	}catch (PDOException $e) {
@@ -17,11 +17,17 @@ function limpiarData($datos){
 	$datos = htmlspecialchars($datos);
 	return $datos;
 }
+
 function pagina_actual(){
-	return isset($_GET['p']) ? (int)$_GET['p'] : 0;
+	return isset($_GET['p']) ? (int)$_GET['p'] : 1;
 }
+
 function obtener_post($post_por_pagina, $conexion){
-	$inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0 ;
+// inicio va a traer un numero el cual es desde donde va a mostrar los post 	
+	$inicio = (pagina_actual() > 1) ? pagina_actual() * $post_por_pagina - $post_por_pagina : 0;
+	$sentencia = $conexion->prepare("SELECT SQL_CALC_FOUND_ROWS * FROM articulos LIMIT $inicio,$post_por_pagina");
+	$sentencia->execute();
+	return $sentencia->fetchAll();
 }
 
 
